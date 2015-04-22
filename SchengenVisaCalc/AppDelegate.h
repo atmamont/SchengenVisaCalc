@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "mainVisaCalc.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
