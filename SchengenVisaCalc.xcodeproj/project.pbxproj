@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552B06C81AF14F5F008C5066 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B06C71AF14F5F008C5066 /* Trip.m */; };
 		555B3DB91AE6E697004A013A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3DB81AE6E697004A013A /* main.m */; };
 		555B3DBC1AE6E697004A013A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3DBB1AE6E697004A013A /* AppDelegate.m */; };
 		555B3DBF1AE6E697004A013A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3DBE1AE6E697004A013A /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		552B06C61AF14F5F008C5066 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		552B06C71AF14F5F008C5066 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
 		555B3DB31AE6E697004A013A /* SchengenVisaCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchengenVisaCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555B3DB71AE6E697004A013A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555B3DB81AE6E697004A013A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,7 +45,7 @@
 		555B3DD11AE6E697004A013A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555B3DD21AE6E698004A013A /* SchengenVisaCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchengenVisaCalcTests.m; sourceTree = "<group>"; };
 		55B235F01AE78ECB00E2D274 /* mainVisaCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainVisaCalc.h; sourceTree = "<group>"; };
-		55B235F11AE78ECB00E2D274 /* mainVisaCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainVisaCalc.m; sourceTree = "<group>"; };
+		55B235F11AE78ECB00E2D274 /* mainVisaCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = mainVisaCalc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				555B3DB61AE6E697004A013A /* Supporting Files */,
 				55B235F01AE78ECB00E2D274 /* mainVisaCalc.h */,
 				55B235F11AE78ECB00E2D274 /* mainVisaCalc.m */,
+				552B06C61AF14F5F008C5066 /* Trip.h */,
+				552B06C71AF14F5F008C5066 /* Trip.m */,
 			);
 			path = SchengenVisaCalc;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552B06C81AF14F5F008C5066 /* Trip.m in Sources */,
 				55B235F21AE78ECB00E2D274 /* mainVisaCalc.m in Sources */,
 				555B3DBF1AE6E697004A013A /* ViewController.m in Sources */,
 				555B3DBC1AE6E697004A013A /* AppDelegate.m in Sources */,

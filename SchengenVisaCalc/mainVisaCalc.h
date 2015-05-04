@@ -7,10 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Trip.h"
+
+// TO DO LIST
+// 1. add init with dates
+// 2. checking trips intersections while adding new trip
 
 @interface mainVisaCalc : NSObject
-+ (void) setEntryDate: (NSDate *) date;
-+ (void) setExitDate: (NSDate *) date;
+@property (strong, nonatomic) NSMutableArray *trips; // of Trip
+@property (strong, nonatomic) NSDate* entryDate;
 
-+ (int) getDays:(void)a;
+- (void) addTrip: (NSDate *) startDate and: (NSDate*) endDate named: (NSString*) name;
+
+- (NSInteger) getTotalRemainingDays;
+
 @end

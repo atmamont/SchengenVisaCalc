@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "mainVisaCalc.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,52 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    
+    NSDateComponents* date1 = [[NSDateComponents alloc] init];
+    [date1 setDay:17];
+    [date1 setMonth:11];
+    [date1 setYear:2014];
+    
+    NSDateComponents* date2 = [[NSDateComponents alloc] init];
+    [date2 setDay:17];
+    [date2 setMonth:12];
+    [date2 setYear:2014];
+
+    NSDate* startDate = [cal dateFromComponents:date1];
+    NSDate* endDate = [cal dateFromComponents:date2];
+
+    mainVisaCalc* calc = [[mainVisaCalc alloc]init];
+    [calc addTrip:startDate and:endDate named:@"Trip1"];
+    
+    [date1 setDay:01];
+    [date1 setMonth:01];
+    [date1 setYear:2015];
+    
+    [date2 setDay:31];
+    [date2 setMonth:01];
+    [date2 setYear:2015];
+    startDate = [cal dateFromComponents:date1];
+    endDate = [cal dateFromComponents:date2];
+    
+//    [calc addTrip:startDate and:endDate named:@"Trip2"];
+    
+    [date1 setDay:5];
+    [date1 setMonth:2];
+    [date1 setYear:2015];
+    
+    [date2 setDay:10];
+    [date2 setMonth:2];
+    [date2 setYear:2015];
+    startDate = [cal dateFromComponents:date1];
+    endDate = [cal dateFromComponents:date2];
+    
+    [calc addTrip:startDate and:endDate named:@"Trip3"];
+
+    NSInteger totalUsedDays = [calc getTotalRemainingDays];
+    NSLog(@"Remaining days: %ld", (long)totalUsedDays);
+    
     return YES;
 }
 
