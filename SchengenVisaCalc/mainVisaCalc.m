@@ -117,7 +117,7 @@ const int MAX_DAYS = 90;
         for (Trip *trip in self.trips)
         {
             NSInteger currentTripDays = [trip getTripDurationBetweenDates:startDate180 and:endDate180];
-            NSLog(@"Trip %@ days %ld", trip.name, (long)currentTripDays);
+            NSLog(@"%@, lasted %ld days", trip, (long)currentTripDays);
             totalDaysCount += currentTripDays;
         }
         

@@ -55,4 +55,9 @@
 
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"Trip named %@ period: %@ - %@", self.name, self.startDate, self.endDate];
+}
+
 @end

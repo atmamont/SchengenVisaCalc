@@ -15,7 +15,7 @@
 
 @interface mainVisaCalc : NSObject
 @property (strong, nonatomic) NSMutableArray *trips; // of Trip
-@property (strong, nonatomic) NSDate* entryDate;
+@property (strong, nonatomic) NSDate* entryDate; // now by default
 
 - (void) addTrip: (NSDate *) startDate and: (NSDate*) endDate named: (NSString*) name;
 
