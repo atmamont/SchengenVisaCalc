@@ -94,8 +94,11 @@
     
     Trip *trip = [self.calc.trips objectAtIndex:indexPath.row];
    
-    cell.dateInLabel.text = trip.startDate.description;
-    cell.dateOutLabel.text = trip.endDate.description;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+    
+    cell.dateInLabel.text = [dateFormatter stringFromDate:trip.startDate];
+    cell.dateOutLabel.text = [dateFormatter stringFromDate:trip.endDate];
     cell.daysCountLabel.text = [NSString stringWithFormat:@"%ld",[trip getTripDurationBetweenDates:trip.startDate and:trip.endDate]];
   
     return cell;

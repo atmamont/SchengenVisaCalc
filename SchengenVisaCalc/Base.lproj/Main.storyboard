@@ -142,7 +142,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CLa-Kz-WEz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CLa-Kz-WEz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.22352941176470589" green="0.22352941176470589" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.22352941176470589" green="0.22352941176470589" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,57 +152,90 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zE7-an-KbS" id="TVL-pf-5xy">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ9-FA-DhR">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ9-FA-DhR">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="27" width="89" height="21"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="8" y="47" width="43" height="16"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Out" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmj-vv-vtG">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmj-vv-vtG">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="310" y="27" width="82" height="21"/>
-                                                    </variation>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDz-le-WbB">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="141" y="45" width="119" height="21"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="338" y="47" width="54" height="16"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8J-yl-f6T">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                     <color key="textColor" red="0.18823529411764706" green="0.22745098039215686" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="147" y="0.0" width="107" height="59"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="147" y="16" width="107" height="27"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDz-le-WbB">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="157" y="47" width="86" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qmj-vv-vtG" firstAttribute="trailing" secondItem="TVL-pf-5xy" secondAttribute="trailingMargin" id="257-J9-pGi"/>
+                                                <constraint firstItem="qmj-vv-vtG" firstAttribute="top" secondItem="TVL-pf-5xy" secondAttribute="topMargin" constant="35" id="4DH-ua-Pcw"/>
+                                                <constraint firstItem="SJ9-FA-DhR" firstAttribute="top" secondItem="TVL-pf-5xy" secondAttribute="topMargin" constant="35" id="9YU-eO-UF5"/>
+                                                <constraint firstItem="G8J-yl-f6T" firstAttribute="leading" secondItem="TVL-pf-5xy" secondAttribute="leadingMargin" constant="139" id="C0a-yQ-fJj"/>
+                                                <constraint firstItem="SJ9-FA-DhR" firstAttribute="leading" secondItem="TVL-pf-5xy" secondAttribute="leadingMargin" id="Esp-3E-wG2"/>
+                                                <constraint firstItem="DDz-le-WbB" firstAttribute="top" secondItem="G8J-yl-f6T" secondAttribute="bottom" constant="4" id="FcY-Ew-bfh"/>
+                                                <constraint firstAttribute="centerX" secondItem="DDz-le-WbB" secondAttribute="centerX" id="NvL-lG-WyT"/>
+                                                <constraint firstAttribute="centerX" secondItem="G8J-yl-f6T" secondAttribute="centerX" constant="-0.5" id="bJB-gX-JYl"/>
+                                                <constraint firstAttribute="centerY" secondItem="G8J-yl-f6T" secondAttribute="centerY" constant="8.5" id="e7G-Zd-heX"/>
+                                            </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="SJ9-FA-DhR"/>
                                                     <exclude reference="qmj-vv-vtG"/>
-                                                    <exclude reference="DDz-le-WbB"/>
                                                     <exclude reference="G8J-yl-f6T"/>
+                                                    <exclude reference="DDz-le-WbB"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="9YU-eO-UF5"/>
+                                                    <exclude reference="Esp-3E-wG2"/>
+                                                    <exclude reference="C0a-yQ-fJj"/>
+                                                    <exclude reference="bJB-gX-JYl"/>
+                                                    <exclude reference="e7G-Zd-heX"/>
+                                                    <exclude reference="FcY-Ew-bfh"/>
+                                                    <exclude reference="NvL-lG-WyT"/>
+                                                    <exclude reference="257-J9-pGi"/>
+                                                    <exclude reference="4DH-ua-Pcw"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="SJ9-FA-DhR"/>
                                                     <include reference="qmj-vv-vtG"/>
-                                                    <include reference="DDz-le-WbB"/>
                                                     <include reference="G8J-yl-f6T"/>
+                                                    <include reference="DDz-le-WbB"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="9YU-eO-UF5"/>
+                                                    <include reference="Esp-3E-wG2"/>
+                                                    <include reference="C0a-yQ-fJj"/>
+                                                    <include reference="bJB-gX-JYl"/>
+                                                    <include reference="e7G-Zd-heX"/>
+                                                    <include reference="FcY-Ew-bfh"/>
+                                                    <include reference="NvL-lG-WyT"/>
+                                                    <include reference="257-J9-pGi"/>
+                                                    <include reference="4DH-ua-Pcw"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
