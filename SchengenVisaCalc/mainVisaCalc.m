@@ -6,22 +6,19 @@
 //  Copyright (c) 2015 Andrey Mamchenko. All rights reserved.
 //
 
-#import "mainVisaCalc.h"
+#import "MainVisaCalc.h"
 
 // private interface
-@interface mainVisaCalc()
+@interface MainVisaCalc()
 
 
 @end
 
 
-@implementation mainVisaCalc
+@implementation MainVisaCalc
 
 const int DAYS_WINDOW = 180;
 const int MAX_DAYS = 90;
-
-@synthesize trips = _trips;
-@synthesize entryDate = _entryDate;
 
 // getter
 - (NSDate *)entryDate

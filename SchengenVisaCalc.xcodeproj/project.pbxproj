@@ -10,12 +10,13 @@
 		552B06C81AF14F5F008C5066 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B06C71AF14F5F008C5066 /* Trip.m */; };
 		555B3DB91AE6E697004A013A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3DB81AE6E697004A013A /* main.m */; };
 		555B3DBC1AE6E697004A013A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3DBB1AE6E697004A013A /* AppDelegate.m */; };
-		555B3DBF1AE6E697004A013A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3DBE1AE6E697004A013A /* ViewController.m */; };
+		555B3DBF1AE6E697004A013A /* SVCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3DBE1AE6E697004A013A /* SVCMainViewController.m */; };
 		555B3DC21AE6E697004A013A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555B3DC01AE6E697004A013A /* Main.storyboard */; };
 		555B3DC41AE6E697004A013A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555B3DC31AE6E697004A013A /* Images.xcassets */; };
 		555B3DC71AE6E697004A013A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555B3DC51AE6E697004A013A /* LaunchScreen.xib */; };
 		555B3DD31AE6E698004A013A /* SchengenVisaCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3DD21AE6E698004A013A /* SchengenVisaCalcTests.m */; };
-		55B235F21AE78ECB00E2D274 /* mainVisaCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B235F11AE78ECB00E2D274 /* mainVisaCalc.m */; };
+		55B235F21AE78ECB00E2D274 /* MainVisaCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B235F11AE78ECB00E2D274 /* MainVisaCalc.m */; };
+		5842876F1B060CC200567F78 /* SVCTripsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842876E1B060CC200567F78 /* SVCTripsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,16 +37,18 @@
 		555B3DB81AE6E697004A013A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		555B3DBA1AE6E697004A013A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		555B3DBB1AE6E697004A013A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		555B3DBD1AE6E697004A013A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		555B3DBE1AE6E697004A013A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		555B3DBD1AE6E697004A013A /* SVCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVCMainViewController.h; sourceTree = "<group>"; };
+		555B3DBE1AE6E697004A013A /* SVCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVCMainViewController.m; sourceTree = "<group>"; };
 		555B3DC11AE6E697004A013A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		555B3DC31AE6E697004A013A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		555B3DC61AE6E697004A013A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		555B3DCC1AE6E697004A013A /* SchengenVisaCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchengenVisaCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		555B3DD11AE6E697004A013A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555B3DD21AE6E698004A013A /* SchengenVisaCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchengenVisaCalcTests.m; sourceTree = "<group>"; };
-		55B235F01AE78ECB00E2D274 /* mainVisaCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainVisaCalc.h; sourceTree = "<group>"; };
-		55B235F11AE78ECB00E2D274 /* mainVisaCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = mainVisaCalc.m; sourceTree = "<group>"; };
+		55B235F01AE78ECB00E2D274 /* MainVisaCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVisaCalc.h; sourceTree = "<group>"; };
+		55B235F11AE78ECB00E2D274 /* MainVisaCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MainVisaCalc.m; sourceTree = "<group>"; };
+		5842876D1B060CC200567F78 /* SVCTripsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVCTripsTableViewCell.h; sourceTree = "<group>"; };
+		5842876E1B060CC200567F78 /* SVCTripsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVCTripsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +72,8 @@
 		5525DE9F1AF7F6FB008EDAE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				55B235F01AE78ECB00E2D274 /* mainVisaCalc.h */,
-				55B235F11AE78ECB00E2D274 /* mainVisaCalc.m */,
+				55B235F01AE78ECB00E2D274 /* MainVisaCalc.h */,
+				55B235F11AE78ECB00E2D274 /* MainVisaCalc.m */,
 				552B06C61AF14F5F008C5066 /* Trip.h */,
 				552B06C71AF14F5F008C5066 /* Trip.m */,
 			);
@@ -98,9 +101,11 @@
 		555B3DB51AE6E697004A013A /* SchengenVisaCalc */ = {
 			isa = PBXGroup;
 			children = (
-				555B3DBD1AE6E697004A013A /* ViewController.h */,
-				555B3DBE1AE6E697004A013A /* ViewController.m */,
+				555B3DBD1AE6E697004A013A /* SVCMainViewController.h */,
+				555B3DBE1AE6E697004A013A /* SVCMainViewController.m */,
 				555B3DC01AE6E697004A013A /* Main.storyboard */,
+				5842876D1B060CC200567F78 /* SVCTripsTableViewCell.h */,
+				5842876E1B060CC200567F78 /* SVCTripsTableViewCell.m */,
 				555B3DC31AE6E697004A013A /* Images.xcassets */,
 				555B3DC51AE6E697004A013A /* LaunchScreen.xib */,
 				555B3DB61AE6E697004A013A /* Supporting Files */,
@@ -238,8 +243,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				552B06C81AF14F5F008C5066 /* Trip.m in Sources */,
-				55B235F21AE78ECB00E2D274 /* mainVisaCalc.m in Sources */,
-				555B3DBF1AE6E697004A013A /* ViewController.m in Sources */,
+				55B235F21AE78ECB00E2D274 /* MainVisaCalc.m in Sources */,
+				555B3DBF1AE6E697004A013A /* SVCMainViewController.m in Sources */,
+				5842876F1B060CC200567F78 /* SVCTripsTableViewCell.m in Sources */,
 				555B3DBC1AE6E697004A013A /* AppDelegate.m in Sources */,
 				555B3DB91AE6E697004A013A /* main.m in Sources */,
 			);

@@ -13,7 +13,7 @@
 // 1. add init with dates
 // 2. checking trips intersections while adding new trip
 
-@interface mainVisaCalc : NSObject
+@interface MainVisaCalc : NSObject
 @property (strong, nonatomic) NSMutableArray *trips; // of Trip
 @property (strong, nonatomic) NSDate* entryDate; // now by default
 

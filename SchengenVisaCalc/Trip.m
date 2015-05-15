@@ -10,10 +10,6 @@
 
 @implementation Trip
 
-@synthesize startDate;
-@synthesize endDate;
-@synthesize name;
-
 - (instancetype)init
 {
     self = [super init];
