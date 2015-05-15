@@ -98,8 +98,6 @@
 		555B3DB51AE6E697004A013A /* SchengenVisaCalc */ = {
 			isa = PBXGroup;
 			children = (
-				555B3DBA1AE6E697004A013A /* AppDelegate.h */,
-				555B3DBB1AE6E697004A013A /* AppDelegate.m */,
 				555B3DBD1AE6E697004A013A /* ViewController.h */,
 				555B3DBE1AE6E697004A013A /* ViewController.m */,
 				555B3DC01AE6E697004A013A /* Main.storyboard */,
@@ -114,6 +112,8 @@
 		555B3DB61AE6E697004A013A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				555B3DBA1AE6E697004A013A /* AppDelegate.h */,
+				555B3DBB1AE6E697004A013A /* AppDelegate.m */,
 				555B3DB71AE6E697004A013A /* Info.plist */,
 				555B3DB81AE6E697004A013A /* main.m */,
 			);
