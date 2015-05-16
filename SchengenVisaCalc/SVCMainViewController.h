@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "MainVisaCalc.h"
+#import "JDFlipNumberView/JDFlipNumberView.h"
 
 @interface SVCMainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tripsTableView;
 @property (strong, nonatomic) MainVisaCalc *calc;
+@property (strong, nonatomic) JDFlipNumberView *daysCounterView;
 
 @end
 

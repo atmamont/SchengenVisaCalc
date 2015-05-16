@@ -15,8 +15,16 @@
 		555B3DC41AE6E697004A013A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555B3DC31AE6E697004A013A /* Images.xcassets */; };
 		555B3DC71AE6E697004A013A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 555B3DC51AE6E697004A013A /* LaunchScreen.xib */; };
 		555B3DD31AE6E698004A013A /* SchengenVisaCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3DD21AE6E698004A013A /* SchengenVisaCalcTests.m */; };
-		55B235F21AE78ECB00E2D274 /* MainVisaCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B235F11AE78ECB00E2D274 /* MainVisaCalc.m */; };
+		55B235F21AE78ECB00E2D274 /* mainVisaCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B235F11AE78ECB00E2D274 /* mainVisaCalc.m */; };
 		5842876F1B060CC200567F78 /* SVCTripsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842876E1B060CC200567F78 /* SVCTripsTableViewCell.m */; };
+		58F0D8271B075D1900738838 /* JDDateCountdownFlipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F0D8201B075D1900738838 /* JDDateCountdownFlipView.m */; };
+		58F0D8281B075D1900738838 /* JDFlipClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F0D8211B075D1900738838 /* JDFlipClockView.m */; };
+		58F0D8291B075D1900738838 /* JDFlipImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F0D8221B075D1900738838 /* JDFlipImageView.m */; };
+		58F0D82A1B075D1900738838 /* JDFlipNumberDigitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F0D8231B075D1900738838 /* JDFlipNumberDigitView.m */; };
+		58F0D82B1B075D1900738838 /* JDFlipNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F0D8241B075D1900738838 /* JDFlipNumberView.m */; };
+		58F0D82C1B075D1900738838 /* JDFlipNumberViewImageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F0D8251B075D1900738838 /* JDFlipNumberViewImageFactory.m */; };
+		58F0D82D1B075D1900738838 /* UIView+JDFlipImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F0D8261B075D1900738838 /* UIView+JDFlipImageView.m */; };
+		58F0D8301B075D5600738838 /* JDFlipNumberView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58F0D82F1B075D5600738838 /* JDFlipNumberView.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +53,18 @@
 		555B3DCC1AE6E697004A013A /* SchengenVisaCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchengenVisaCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		555B3DD11AE6E697004A013A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555B3DD21AE6E698004A013A /* SchengenVisaCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchengenVisaCalcTests.m; sourceTree = "<group>"; };
-		55B235F01AE78ECB00E2D274 /* MainVisaCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVisaCalc.h; sourceTree = "<group>"; };
-		55B235F11AE78ECB00E2D274 /* MainVisaCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MainVisaCalc.m; sourceTree = "<group>"; };
+		55B235F01AE78ECB00E2D274 /* mainVisaCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainVisaCalc.h; sourceTree = "<group>"; };
+		55B235F11AE78ECB00E2D274 /* mainVisaCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = mainVisaCalc.m; sourceTree = "<group>"; };
 		5842876D1B060CC200567F78 /* SVCTripsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVCTripsTableViewCell.h; sourceTree = "<group>"; };
 		5842876E1B060CC200567F78 /* SVCTripsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVCTripsTableViewCell.m; sourceTree = "<group>"; };
+		58F0D8201B075D1900738838 /* JDDateCountdownFlipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JDDateCountdownFlipView.m; path = SchengenVisaCalc/JDFlipNumberView/JDDateCountdownFlipView.m; sourceTree = "<group>"; };
+		58F0D8211B075D1900738838 /* JDFlipClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JDFlipClockView.m; path = SchengenVisaCalc/JDFlipNumberView/JDFlipClockView.m; sourceTree = "<group>"; };
+		58F0D8221B075D1900738838 /* JDFlipImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JDFlipImageView.m; path = SchengenVisaCalc/JDFlipNumberView/JDFlipImageView.m; sourceTree = "<group>"; };
+		58F0D8231B075D1900738838 /* JDFlipNumberDigitView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JDFlipNumberDigitView.m; path = SchengenVisaCalc/JDFlipNumberView/JDFlipNumberDigitView.m; sourceTree = "<group>"; };
+		58F0D8241B075D1900738838 /* JDFlipNumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JDFlipNumberView.m; path = SchengenVisaCalc/JDFlipNumberView/JDFlipNumberView.m; sourceTree = "<group>"; };
+		58F0D8251B075D1900738838 /* JDFlipNumberViewImageFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JDFlipNumberViewImageFactory.m; path = SchengenVisaCalc/JDFlipNumberView/JDFlipNumberViewImageFactory.m; sourceTree = "<group>"; };
+		58F0D8261B075D1900738838 /* UIView+JDFlipImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+JDFlipImageView.m"; path = "SchengenVisaCalc/JDFlipNumberView/UIView+JDFlipImageView.m"; sourceTree = "<group>"; };
+		58F0D82F1B075D5600738838 /* JDFlipNumberView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JDFlipNumberView.bundle; path = SchengenVisaCalc/JDFlipNumberView/JDFlipNumberView.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +88,8 @@
 		5525DE9F1AF7F6FB008EDAE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				55B235F01AE78ECB00E2D274 /* MainVisaCalc.h */,
-				55B235F11AE78ECB00E2D274 /* MainVisaCalc.m */,
+				55B235F01AE78ECB00E2D274 /* mainVisaCalc.h */,
+				55B235F11AE78ECB00E2D274 /* mainVisaCalc.m */,
 				552B06C61AF14F5F008C5066 /* Trip.h */,
 				552B06C71AF14F5F008C5066 /* Trip.m */,
 			);
@@ -117,6 +133,7 @@
 		555B3DB61AE6E697004A013A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				58F0D82E1B075D2B00738838 /* JDFlipNumberView */,
 				555B3DBA1AE6E697004A013A /* AppDelegate.h */,
 				555B3DBB1AE6E697004A013A /* AppDelegate.m */,
 				555B3DB71AE6E697004A013A /* Info.plist */,
@@ -140,6 +157,22 @@
 				555B3DD11AE6E697004A013A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58F0D82E1B075D2B00738838 /* JDFlipNumberView */ = {
+			isa = PBXGroup;
+			children = (
+				58F0D82F1B075D5600738838 /* JDFlipNumberView.bundle */,
+				58F0D8201B075D1900738838 /* JDDateCountdownFlipView.m */,
+				58F0D8211B075D1900738838 /* JDFlipClockView.m */,
+				58F0D8221B075D1900738838 /* JDFlipImageView.m */,
+				58F0D8231B075D1900738838 /* JDFlipNumberDigitView.m */,
+				58F0D8241B075D1900738838 /* JDFlipNumberView.m */,
+				58F0D8251B075D1900738838 /* JDFlipNumberViewImageFactory.m */,
+				58F0D8261B075D1900738838 /* UIView+JDFlipImageView.m */,
+			);
+			name = JDFlipNumberView;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F0D8301B075D5600738838 /* JDFlipNumberView.bundle in Resources */,
 				555B3DC21AE6E697004A013A /* Main.storyboard in Resources */,
 				555B3DC71AE6E697004A013A /* LaunchScreen.xib in Resources */,
 				555B3DC41AE6E697004A013A /* Images.xcassets in Resources */,
@@ -242,8 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F0D8271B075D1900738838 /* JDDateCountdownFlipView.m in Sources */,
+				58F0D8281B075D1900738838 /* JDFlipClockView.m in Sources */,
+				58F0D8291B075D1900738838 /* JDFlipImageView.m in Sources */,
+				58F0D82A1B075D1900738838 /* JDFlipNumberDigitView.m in Sources */,
+				58F0D82B1B075D1900738838 /* JDFlipNumberView.m in Sources */,
+				58F0D82C1B075D1900738838 /* JDFlipNumberViewImageFactory.m in Sources */,
+				58F0D82D1B075D1900738838 /* UIView+JDFlipImageView.m in Sources */,
 				552B06C81AF14F5F008C5066 /* Trip.m in Sources */,
-				55B235F21AE78ECB00E2D274 /* MainVisaCalc.m in Sources */,
+				55B235F21AE78ECB00E2D274 /* mainVisaCalc.m in Sources */,
 				555B3DBF1AE6E697004A013A /* SVCMainViewController.m in Sources */,
 				5842876F1B060CC200567F78 /* SVCTripsTableViewCell.m in Sources */,
 				555B3DBC1AE6E697004A013A /* AppDelegate.m in Sources */,
@@ -370,8 +411,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SchengenVisaCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -380,8 +425,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SchengenVisaCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

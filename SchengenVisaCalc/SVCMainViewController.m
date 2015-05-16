@@ -20,8 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self setNeedsStatusBarAppearanceUpdate];
-    
-    
+     
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     
     NSDateComponents* date1 = [[NSDateComponents alloc] init];
@@ -51,7 +50,7 @@
     startDate = [cal dateFromComponents:date1];
     endDate = [cal dateFromComponents:date2];
     
-    //    [calc addTrip:startDate and:endDate named:@"Trip2"];
+    [self.calc addTrip:startDate and:endDate named:@"Trip2"];
     
     [date1 setDay:5];
     [date1 setMonth:2];
@@ -67,7 +66,20 @@
     
     NSInteger totalUsedDays = [self.calc getTotalRemainingDays];
     NSLog(@"Remaining days: %ld", (long)totalUsedDays);
+    
+    
+    self.daysCounterView = [[JDFlipNumberView alloc] initWithDigitCount:2];
+    self.daysCounterView.value = totalUsedDays;
+    [self.view addSubview:self.daysCounterView];
+    
+    self.daysCounterView.frame = CGRectMake(65,75,250,180);
+}
 
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.view bringSubviewToFront:self.daysCounterView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,6 +112,8 @@
     cell.dateInLabel.text = [dateFormatter stringFromDate:trip.startDate];
     cell.dateOutLabel.text = [dateFormatter stringFromDate:trip.endDate];
     cell.daysCountLabel.text = [NSString stringWithFormat:@"%ld",[trip getTripDurationBetweenDates:trip.startDate and:trip.endDate]];
+    cell.layoutMargins = UIEdgeInsetsZero;
+    cell.preservesSuperviewLayoutMargins = NO;
   
     return cell;
 }
