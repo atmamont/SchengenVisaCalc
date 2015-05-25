@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -26,18 +26,12 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="126" y="8" width="151" height="27"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXW-kS-gaa">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.54117647058823526" green="0.58823529411764708" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="211" y="30" width="66" height="17"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days permitted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpQ-0k-mcl">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -57,8 +51,8 @@
                                             <fragment content="today">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="17" name=".HelveticaNeueDeskInterface-Regular"/>
-                                                    <font key="NSOriginalFont" size="17" name=".HelveticaNeueDeskInterface-Regular"/>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                     <integer key="NSUnderline" value="1"/>
                                                 </attributes>
@@ -94,16 +88,16 @@
                                         <exclude reference="jTf-9l-tBa"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="3MU-oL-Hot"/>
-                                        <exclude reference="9Jr-8k-r5T"/>
-                                        <exclude reference="MtX-1b-gdY"/>
-                                        <exclude reference="rrQ-Jg-1IK"/>
-                                        <exclude reference="akZ-tT-gMw"/>
                                         <exclude reference="1uA-SS-Xf7"/>
                                         <exclude reference="9OZ-IB-L4d"/>
                                         <exclude reference="Q36-uW-d8l"/>
                                         <exclude reference="bf3-83-xZ1"/>
                                         <exclude reference="zpd-Jo-wAb"/>
+                                        <exclude reference="3MU-oL-Hot"/>
+                                        <exclude reference="9Jr-8k-r5T"/>
+                                        <exclude reference="MtX-1b-gdY"/>
+                                        <exclude reference="rrQ-Jg-1IK"/>
+                                        <exclude reference="akZ-tT-gMw"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -115,16 +109,16 @@
                                         <include reference="jTf-9l-tBa"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="3MU-oL-Hot"/>
-                                        <include reference="9Jr-8k-r5T"/>
-                                        <include reference="MtX-1b-gdY"/>
-                                        <include reference="rrQ-Jg-1IK"/>
-                                        <include reference="akZ-tT-gMw"/>
                                         <include reference="1uA-SS-Xf7"/>
                                         <include reference="9OZ-IB-L4d"/>
                                         <include reference="Q36-uW-d8l"/>
                                         <include reference="bf3-83-xZ1"/>
                                         <include reference="zpd-Jo-wAb"/>
+                                        <include reference="3MU-oL-Hot"/>
+                                        <include reference="9Jr-8k-r5T"/>
+                                        <include reference="MtX-1b-gdY"/>
+                                        <include reference="rrQ-Jg-1IK"/>
+                                        <include reference="akZ-tT-gMw"/>
                                     </mask>
                                 </variation>
                             </view>
