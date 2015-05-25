@@ -362,9 +362,6 @@
                                 <state key="normal" title="Update">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="456" width="89" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="updateButtonClick:" destination="EKK-jW-gil" eventType="touchUpInside" id="w6S-Pq-13D"/>
                                 </connections>
@@ -374,9 +371,6 @@
                                 <state key="normal" title="Canel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="210" y="456" width="46" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="cancelButtonClick:" destination="EKK-jW-gil" eventType="touchUpInside" id="ACW-Zq-wnz"/>
                                 </connections>
@@ -401,14 +395,14 @@
                                 <exclude reference="Z90-PT-BVP"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="ix7-yF-Zyc"/>
-                                <exclude reference="vKJ-Ct-wjl"/>
-                                <exclude reference="QRU-Jq-Z78"/>
-                                <exclude reference="b5b-6J-fd8"/>
-                                <exclude reference="75f-9h-xzs"/>
-                                <exclude reference="jjZ-0M-Vwp"/>
                                 <exclude reference="5t7-Xc-6kG"/>
                                 <exclude reference="e5x-1d-bwh"/>
+                                <exclude reference="75f-9h-xzs"/>
+                                <exclude reference="jjZ-0M-Vwp"/>
+                                <exclude reference="QRU-Jq-Z78"/>
+                                <exclude reference="b5b-6J-fd8"/>
+                                <exclude reference="ix7-yF-Zyc"/>
+                                <exclude reference="vKJ-Ct-wjl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -419,14 +413,14 @@
                                 <include reference="Z90-PT-BVP"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ix7-yF-Zyc"/>
-                                <include reference="vKJ-Ct-wjl"/>
-                                <include reference="QRU-Jq-Z78"/>
-                                <include reference="b5b-6J-fd8"/>
-                                <include reference="75f-9h-xzs"/>
-                                <include reference="jjZ-0M-Vwp"/>
                                 <include reference="5t7-Xc-6kG"/>
                                 <include reference="e5x-1d-bwh"/>
+                                <include reference="75f-9h-xzs"/>
+                                <include reference="jjZ-0M-Vwp"/>
+                                <include reference="QRU-Jq-Z78"/>
+                                <include reference="b5b-6J-fd8"/>
+                                <include reference="ix7-yF-Zyc"/>
+                                <include reference="vKJ-Ct-wjl"/>
                             </mask>
                         </variation>
                     </view>

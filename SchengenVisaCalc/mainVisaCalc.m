@@ -54,7 +54,23 @@ const int MAX_DAYS = 90;
     newTrip.startDate = startDate;
     newTrip.endDate = endDate;
     newTrip.name = name;
-    [self.trips addObject:(newTrip)];
+    
+    //[self.trips addObject:(newTrip)];
+    // trying to find correct place to insert new trip
+    NSUInteger newIndex = -1;
+    for (Trip *trip in self.trips){
+        if (trip.startDate > newTrip.startDate)
+        {
+            // assuming array always sorted by startDate
+            newIndex = [self.trips indexOfObject:trip];
+            break;
+        }
+    }
+    if (newIndex != -1)
+        [self.trips insertObject:newTrip atIndex:newIndex];
+    else
+        [self.trips addObject:(newTrip)];
+    
     
 }
 

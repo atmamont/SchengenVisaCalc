@@ -25,34 +25,13 @@
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     
     NSDateComponents* date1 = [[NSDateComponents alloc] init];
-    [date1 setDay:17];
-    [date1 setMonth:11];
-    [date1 setYear:2014];
-    
     NSDateComponents* date2 = [[NSDateComponents alloc] init];
-    [date2 setDay:17];
-    [date2 setMonth:12];
-    [date2 setYear:2014];
-    
-    NSDate* startDate = [cal dateFromComponents:date1];
-    NSDate* endDate = [cal dateFromComponents:date2];
+    NSDate* startDate;
+    NSDate* endDate;
     
     self.calc = [[MainVisaCalc alloc] init];
-    
-    [self.calc addTrip:startDate and:endDate named:@"Trip1"];
-    
-    [date1 setDay:01];
-    [date1 setMonth:01];
-    [date1 setYear:2015];
-    
-    [date2 setDay:31];
-    [date2 setMonth:01];
-    [date2 setYear:2015];
-    startDate = [cal dateFromComponents:date1];
-    endDate = [cal dateFromComponents:date2];
-    
-    [self.calc addTrip:startDate and:endDate named:@"Trip2"];
-    
+
+    // TRIP 1
     [date1 setDay:5];
     [date1 setMonth:2];
     [date1 setYear:2015];
@@ -64,6 +43,32 @@
     endDate = [cal dateFromComponents:date2];
     
     [self.calc addTrip:startDate and:endDate named:@"Trip3"];
+ 
+    // TRIP 2
+    [date1 setDay:01];
+    [date1 setMonth:01];
+    [date1 setYear:2015];
+    
+    [date2 setDay:31];
+    [date2 setMonth:01];
+    [date2 setYear:2015];
+    startDate = [cal dateFromComponents:date1];
+    endDate = [cal dateFromComponents:date2];
+    
+    [self.calc addTrip:startDate and:endDate named:@"Trip2"];
+
+    // TRIP3
+    [date1 setDay:17];
+    [date1 setMonth:11];
+    [date1 setYear:2014];
+    
+    [date2 setDay:17];
+    [date2 setMonth:12];
+    [date2 setYear:2014];
+    startDate = [cal dateFromComponents:date1];
+    endDate = [cal dateFromComponents:date2];
+
+    [self.calc addTrip:startDate and:endDate named:@"Trip1"];
     
     NSInteger totalUsedDays = [self.calc getTotalRemainingDays];
     NSLog(@"Remaining days: %ld", (long)totalUsedDays);
