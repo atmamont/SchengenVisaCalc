@@ -15,6 +15,10 @@
 @property (weak, nonatomic) IBOutlet UITableView *tripsTableView;
 @property (strong, nonatomic) MainVisaCalc *calc;
 @property (strong, nonatomic) JDFlipNumberView *daysCounterView;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
+
+- (void)updateDaysCounter;
+- (void)addNewTrip:(UIRefreshControl *)controller;
 
 @end
 
