@@ -23,8 +23,8 @@
                                       and: (NSDate *) date2
 {
     
-    NSDate* startDate_ = self.startDate;
-    NSDate* endDate_   = self.endDate;
+    NSDate* startDate_ = self.startDate == nil ? [[NSDate alloc]init] : self.startDate;
+    NSDate* endDate_   = self.endDate == nil ? [[NSDate alloc]init] : self.endDate;
     
     // checking for out of period
     if ([[endDate_ earlierDate:date1] isEqualToDate:endDate_] || [[startDate_ laterDate:date2] isEqualToDate:startDate_]) return 0;

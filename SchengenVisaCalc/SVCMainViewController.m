@@ -40,7 +40,8 @@
     [date2 setMonth:4];
     [date2 setYear:2015];
     startDate = [cal dateFromComponents:date1];
-    endDate = [cal dateFromComponents:date2];
+//    endDate = [cal dateFromComponents:date2];
+      endDate = nil;
     
     [self.calc addTrip:startDate and:endDate named:@"Trip3"];
  
