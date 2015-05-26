@@ -18,6 +18,13 @@
     return self;
 }
 
+// getters
+- (NSDate *) startDate{
+    return (_startDate == nil) ? [[NSDate alloc]init] : _startDate;
+}
+- (NSDate *) endDate{
+    return (_endDate == nil) ? [[NSDate alloc]init] : _endDate;
+}
 
 - (NSInteger) getTripDurationBetweenDates: (NSDate *) date1
                                       and: (NSDate *) date2

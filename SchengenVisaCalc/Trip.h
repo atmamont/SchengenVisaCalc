@@ -14,6 +14,9 @@
 @property (nonatomic) NSDate* endDate;
 @property (nonatomic) NSString* name;
 
+- (NSDate *) startDate;
+- (NSDate *) endDate;
+
 - (NSInteger) getTripDurationBetweenDates: (NSDate *) date1
                                       and: (NSDate *) date2;
 @end
