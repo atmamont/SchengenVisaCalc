@@ -28,6 +28,8 @@
 		58F0D8301B075D5600738838 /* JDFlipNumberView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58F0D82F1B075D5600738838 /* JDFlipNumberView.bundle */; };
 		58FBDC841B1E12A700494F06 /* SVCSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FBDC831B1E12A700494F06 /* SVCSwitchTableViewCell.m */; };
 		58FCDB4C1B1EF4990047BD1A /* SVCTripNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FCDB4B1B1EF4990047BD1A /* SVCTripNameTableViewCell.m */; };
+		58FCDB4F1B1F2ACD0047BD1A /* in.png in Resources */ = {isa = PBXBuildFile; fileRef = 58FCDB4D1B1F2ACD0047BD1A /* in.png */; };
+		58FCDB501B1F2ACD0047BD1A /* out.png in Resources */ = {isa = PBXBuildFile; fileRef = 58FCDB4E1B1F2ACD0047BD1A /* out.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		58FBDC831B1E12A700494F06 /* SVCSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVCSwitchTableViewCell.m; sourceTree = "<group>"; };
 		58FCDB4A1B1EF4990047BD1A /* SVCTripNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVCTripNameTableViewCell.h; sourceTree = "<group>"; };
 		58FCDB4B1B1EF4990047BD1A /* SVCTripNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVCTripNameTableViewCell.m; sourceTree = "<group>"; };
+		58FCDB4D1B1F2ACD0047BD1A /* in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = in.png; path = Images.xcassets/in.png; sourceTree = "<group>"; };
+		58FCDB4E1B1F2ACD0047BD1A /* out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = out.png; path = Images.xcassets/out.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 		555B3DB61AE6E697004A013A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				58FCDB4D1B1F2ACD0047BD1A /* in.png */,
+				58FCDB4E1B1F2ACD0047BD1A /* out.png */,
 				58F0D82E1B075D2B00738838 /* JDFlipNumberView */,
 				555B3DBA1AE6E697004A013A /* AppDelegate.h */,
 				555B3DBB1AE6E697004A013A /* AppDelegate.m */,
@@ -270,6 +276,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FCDB501B1F2ACD0047BD1A /* out.png in Resources */,
+				58FCDB4F1B1F2ACD0047BD1A /* in.png in Resources */,
 				58F0D8301B075D5600738838 /* JDFlipNumberView.bundle in Resources */,
 				555B3DC21AE6E697004A013A /* Main.storyboard in Resources */,
 				555B3DC71AE6E697004A013A /* LaunchScreen.xib in Resources */,
