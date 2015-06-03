@@ -19,14 +19,23 @@
 
 - (void)saveTripsData
 {
-    NSMutableArray *archiveArray = [NSMutableArray arrayWithCapacity:self.calc.trips.count];
-    for (Trip *trip in self.calc.trips)
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (self.calc.trips.count == 0)
     {
-        NSData *tripEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:trip];
-        [archiveArray addObject:tripEncodedObject];
-        
-        [[NSUserDefaults standardUserDefaults] setObject:archiveArray forKey:@"Trips"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [userDefaults removeObjectForKey:@"Trips"];
+    }
+    else
+    {
+
+        NSMutableArray *archiveArray = [NSMutableArray arrayWithCapacity:self.calc.trips.count];
+        for (Trip *trip in self.calc.trips)
+        {
+            NSData *tripEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:trip];
+            [archiveArray addObject:tripEncodedObject];
+            
+            [userDefaults setObject:archiveArray forKey:@"Trips"];
+            [userDefaults synchronize];
+        }
     }
 }
 
@@ -66,6 +75,7 @@
     tableViewController.tableView = self.tripsTableView;
     
     self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.tintColor = [UIColor lightGrayColor];
     [self.refreshControl addTarget:self action:@selector(addNewTrip:) forControlEvents:UIControlEventValueChanged];
     tableViewController.refreshControl = self.refreshControl;
 }
