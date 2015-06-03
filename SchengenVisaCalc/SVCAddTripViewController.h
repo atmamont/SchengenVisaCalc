@@ -9,13 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "SVCMainViewController.h"
 
-@interface SVCAddTripViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIDatePicker *inDatePicker;
-@property (weak, nonatomic) IBOutlet UIDatePicker *outDatePicker;
+@interface SVCAddTripViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
+
 
 @property (weak, nonatomic) SVCMainViewController *mainViewController;
-@property (weak, nonatomic) IBOutlet UIButton *updateButton;
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+
 
 @property (nonatomic) BOOL isEditing;
 

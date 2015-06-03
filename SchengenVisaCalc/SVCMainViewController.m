@@ -108,8 +108,18 @@
     return UIStatusBarStyleLightContent;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
 
-// ================= ==== TABLEVIEW STUFF
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+}
+
+
+// ====================== TABLEVIEW STUFF
 // ======================================
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -130,8 +140,12 @@
     dateFormatter.dateStyle = NSDateFormatterMediumStyle;
     
     cell.dateInLabel.text = [dateFormatter stringFromDate:trip.startDate];
-    cell.dateOutLabel.text = [dateFormatter stringFromDate:trip.endDate];
+    
+    if (trip.endDate) cell.dateOutLabel.text = [dateFormatter stringFromDate:trip.endDate];
+        else cell.dateOutLabel.text = @"In process";
+    
     cell.daysCountLabel.text = [NSString stringWithFormat:@"%ld",[trip getTripDurationBetweenDates:trip.startDate and:trip.endDate]];
+    cell.tripDescriptionLabel.text = trip.name;
     cell.layoutMargins = UIEdgeInsetsZero;
     cell.preservesSuperviewLayoutMargins = NO;
   
@@ -173,8 +187,8 @@
     
     if (self.daysCounterView) {
         NSInteger totalUsedDays = [self.calc getTotalRemainingDays];
-        if (totalUsedDays != self.daysCounterView.value)
-            [self.daysCounterView animateToValue:totalUsedDays duration:2];
+        self.daysCounterView.value = totalUsedDays + 9;
+        [self.daysCounterView animateToValue:totalUsedDays duration:2];
     }
 }
 
