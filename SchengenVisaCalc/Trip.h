@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Trip : NSObject
+@interface Trip : NSObject <NSCoding>
 
 @property (nonatomic) NSDate* startDate;
 @property (nonatomic) NSDate* endDate;

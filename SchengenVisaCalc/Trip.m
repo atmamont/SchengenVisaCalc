@@ -56,4 +56,24 @@
     return [NSString stringWithFormat:@"Trip named %@ period: %@ - %@", self.name, self.startDate, self.endDate];
 }
 
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    if (self != nil)
+    {
+        _startDate = [aDecoder decodeObjectForKey:@"StartDate"];
+        _endDate = [aDecoder decodeObjectForKey:@"EndDate"];
+        _name = [aDecoder decodeObjectForKey:@"Name"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:_startDate forKey:@"StartDate"];
+    [aCoder encodeObject:_endDate forKey:@"EndDate"];
+    [aCoder encodeObject:_name forKey:@"Name"];
+}
+
 @end

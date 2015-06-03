@@ -92,8 +92,6 @@
         path = [NSIndexPath indexPathForRow:0 inSection:0];
         SVCTripNameTableViewCell *cell = (SVCTripNameTableViewCell *)[self.tableView cellForRowAtIndexPath:path];
         selectedTrip.name = cell.descriptionTextField.text;
-        
-        [self.navigationController popToRootViewControllerAnimated:YES];
     }
     else {      // we're adding new trip
         NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
@@ -102,6 +100,9 @@
         
         [self.mainViewController.refreshControl endRefreshing];
     }
+
+    [self.mainViewController saveTripsData];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)cancelButtonClick:(id)sender {

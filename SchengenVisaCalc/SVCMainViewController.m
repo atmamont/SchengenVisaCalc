@@ -17,63 +17,43 @@
 
 @implementation SVCMainViewController
 
+- (void)saveTripsData
+{
+    NSMutableArray *archiveArray = [NSMutableArray arrayWithCapacity:self.calc.trips.count];
+    for (Trip *trip in self.calc.trips)
+    {
+        NSData *tripEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:trip];
+        [archiveArray addObject:tripEncodedObject];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:archiveArray forKey:@"Trips"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
+- (void)loadTripsData
+{
+    NSArray *archiveArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"Trips"];
+    if (archiveArray != nil)
+    {
+        for (NSData *trip in archiveArray)
+        {
+            Trip  *unarchivedTrip = [NSKeyedUnarchiver unarchiveObjectWithData:trip];
+            if (unarchivedTrip != nil) [self.calc.trips addObject:unarchivedTrip];
+        }
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self setNeedsStatusBarAppearanceUpdate];
-     
-    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    
-    NSDateComponents* date1 = [[NSDateComponents alloc] init];
-    NSDateComponents* date2 = [[NSDateComponents alloc] init];
-    NSDate* startDate;
-    NSDate* endDate;
     
     self.calc = [[MainVisaCalc alloc] init];
-
-    // TRIP 1
-    [date1 setDay:5];
-    [date1 setMonth:2];
-    [date1 setYear:2015];
     
-    [date2 setDay:10];
-    [date2 setMonth:4];
-    [date2 setYear:2015];
-    startDate = [cal dateFromComponents:date1];
-//    endDate = [cal dateFromComponents:date2];
-      endDate = nil;
-    
-    [self.calc addTrip:startDate and:endDate named:@"Trip3"];
- 
-    // TRIP 2
-    [date1 setDay:01];
-    [date1 setMonth:01];
-    [date1 setYear:2015];
-    
-    [date2 setDay:31];
-    [date2 setMonth:01];
-    [date2 setYear:2015];
-    startDate = [cal dateFromComponents:date1];
-    endDate = [cal dateFromComponents:date2];
-    
-    [self.calc addTrip:startDate and:endDate named:@"Trip2"];
-
-    // TRIP3
-    [date1 setDay:17];
-    [date1 setMonth:11];
-    [date1 setYear:2014];
-    
-    [date2 setDay:17];
-    [date2 setMonth:12];
-    [date2 setYear:2014];
-    startDate = [cal dateFromComponents:date1];
-    endDate = [cal dateFromComponents:date2];
-
-    [self.calc addTrip:startDate and:endDate named:@"Trip1"];
+    [self loadTripsData];
     
     NSInteger totalUsedDays = [self.calc getTotalRemainingDays];
     NSLog(@"Remaining days: %ld", (long)totalUsedDays);
-    
     
     self.daysCounterView = [[JDFlipNumberView alloc] initWithDigitCount:2];
     self.daysCounterView.value = 99;
@@ -88,7 +68,6 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(addNewTrip:) forControlEvents:UIControlEventValueChanged];
     tableViewController.refreshControl = self.refreshControl;
-    
 }
 
 
@@ -169,6 +148,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.calc.trips removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        [self saveTripsData];
+        
         [self updateDaysCounter];
     }
 }

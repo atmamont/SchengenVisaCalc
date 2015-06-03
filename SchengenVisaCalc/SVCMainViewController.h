@@ -19,6 +19,7 @@
 
 - (void)updateDaysCounter;
 - (void)addNewTrip:(UIRefreshControl *)controller;
+- (void)saveTripsData;
 
 @end
 
