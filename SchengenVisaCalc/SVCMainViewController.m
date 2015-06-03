@@ -130,10 +130,18 @@
     
     cell.dateInLabel.text = [dateFormatter stringFromDate:trip.startDate];
     
-    if (trip.endDate) cell.dateOutLabel.text = [dateFormatter stringFromDate:trip.endDate];
-        else cell.dateOutLabel.text = @"In process";
+    if (trip.endDate != nil)
+    {
+        cell.dateOutLabel.text = [dateFormatter stringFromDate:trip.endDate];
+        cell.daysCountLabel.text = [NSString stringWithFormat:@"%ld",[trip getTripDurationBetweenDates:trip.startDate and:trip.endDate]];
+    }
+    else
+    {
+        cell.dateOutLabel.text = @"In process";
+        cell.daysCountLabel.text = [NSString stringWithFormat:@"%ld",[trip getTripDurationBetweenDates:trip.startDate and:[NSDate date]]];
+    }
     
-    cell.daysCountLabel.text = [NSString stringWithFormat:@"%ld",[trip getTripDurationBetweenDates:trip.startDate and:trip.endDate]];
+    
     cell.tripDescriptionLabel.text = trip.name;
     cell.layoutMargins = UIEdgeInsetsZero;
     cell.preservesSuperviewLayoutMargins = NO;

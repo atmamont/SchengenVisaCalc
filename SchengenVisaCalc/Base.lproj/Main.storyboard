@@ -248,14 +248,18 @@
                                                 <constraint firstItem="DDz-le-WbB" firstAttribute="top" secondItem="G8J-yl-f6T" secondAttribute="bottom" constant="4" id="FcY-Ew-bfh">
                                                     <variation key="heightClass=regular-widthClass=compact" constant="2.5"/>
                                                 </constraint>
-                                                <constraint firstItem="G8J-yl-f6T" firstAttribute="centerX" secondItem="DDz-le-WbB" secondAttribute="centerX" constant="-0.25" id="GVM-Hh-geB"/>
+                                                <constraint firstItem="G8J-yl-f6T" firstAttribute="centerX" secondItem="DDz-le-WbB" secondAttribute="centerX" constant="-0.25" id="GVM-Hh-geB">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                                </constraint>
                                                 <constraint firstAttribute="centerX" secondItem="DDz-le-WbB" secondAttribute="centerX" id="NvL-lG-WyT"/>
                                                 <constraint firstItem="qmj-vv-vtG" firstAttribute="top" secondItem="CeD-OL-TP5" secondAttribute="bottom" constant="8" id="Rqb-ja-gRf"/>
                                                 <constraint firstAttribute="centerX" secondItem="G8J-yl-f6T" secondAttribute="centerX" constant="-0.5" id="bJB-gX-JYl">
                                                     <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                                 </constraint>
                                                 <constraint firstItem="DDz-le-WbB" firstAttribute="top" secondItem="G8J-yl-f6T" secondAttribute="bottom" constant="2.5" id="cgM-ja-f8B"/>
-                                                <constraint firstAttribute="centerY" secondItem="G8J-yl-f6T" secondAttribute="centerY" constant="8.5" id="e7G-Zd-heX"/>
+                                                <constraint firstAttribute="centerY" secondItem="G8J-yl-f6T" secondAttribute="centerY" constant="8.5" id="e7G-Zd-heX">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                </constraint>
                                                 <constraint firstItem="SJ9-FA-DhR" firstAttribute="centerX" secondItem="cbt-XI-Xgj" secondAttribute="centerX" id="g5M-WF-DXg"/>
                                                 <constraint firstItem="qmj-vv-vtG" firstAttribute="centerX" secondItem="CeD-OL-TP5" secondAttribute="centerX" constant="-0.5" id="mLy-ca-Tbz"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qmj-vv-vtG" secondAttribute="trailing" constant="20" id="qEV-O8-QtF"/>
