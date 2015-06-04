@@ -444,16 +444,32 @@
         cell.userInteractionEnabled = NO;
     } else
     {
-        // enable dep cell, set date to today
-        self.departureDate = [NSDate date];
-        NSInteger targetRow = 2;
-        if ([self hasInlineDatePicker]) targetRow++;
-        NSIndexPath *departureRowIndexPath = [NSIndexPath indexPathForRow:targetRow inSection:1];
+        // enable dep cell, show datepicker, set date to entry date
+        self.departureDate = self.entryDate;
+        // remove datepicker
+        if ([self hasInlineDatePicker])
+        {
+            [self.tableView beginUpdates];
+            [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.datePickerIndexPath.row inSection:1]]
+                                  withRowAnimation:UITableViewRowAnimationFade];
+            self.datePickerIndexPath = nil;
+            [self.tableView endUpdates];
+        }
+        // show datepicker
+        [self.tableView beginUpdates];
+        self.datePickerIndexPath = [NSIndexPath indexPathForRow:3 inSection:1];
+        [self.tableView insertRowsAtIndexPaths:@[self.datePickerIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.tableView endUpdates];
+        
+        NSIndexPath *departureRowIndexPath = [NSIndexPath indexPathForRow:2 inSection:1];
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:departureRowIndexPath];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateStyle = NSDateFormatterMediumStyle;
         cell.detailTextLabel.text = [dateFormatter stringFromDate:self.departureDate];
+        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:2 inSection:1]] withRowAnimation:UITableViewRowAnimationNone];
+        [self updateDatePicker];
         cell.userInteractionEnabled = YES;
+       
     }
 }
 

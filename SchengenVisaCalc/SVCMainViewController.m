@@ -125,6 +125,12 @@
     
     Trip *trip = [self.calc.trips objectAtIndex:indexPath.row];
    
+    // if there is no description - move days counter a little bit lower
+    if ([trip.name isEqualToString:@""])
+        cell.daysCountLabel.center = CGPointMake(cell.daysCountLabel.center.x, 40);
+    else
+        cell.daysCountLabel.center = CGPointMake(cell.daysCountLabel.center.x, 25);
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateStyle = NSDateFormatterMediumStyle;
     
