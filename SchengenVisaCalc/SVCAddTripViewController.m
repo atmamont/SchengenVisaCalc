@@ -473,5 +473,16 @@
     }
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+ 
+    SVCTripNameTableViewCell *cell = (SVCTripNameTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([cell.descriptionTextField isFirstResponder] && [touch view] != cell.descriptionTextField) {
+        [cell.descriptionTextField resignFirstResponder];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
+
 
 @end

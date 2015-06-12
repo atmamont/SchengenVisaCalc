@@ -26,7 +26,6 @@
     }
     else
     {
-
         NSMutableArray *archiveArray = [NSMutableArray arrayWithCapacity:self.calc.trips.count];
         for (Trip *trip in self.calc.trips)
         {
@@ -34,9 +33,9 @@
             [archiveArray addObject:tripEncodedObject];
             
             [userDefaults setObject:archiveArray forKey:@"Trips"];
-            [userDefaults synchronize];
         }
     }
+    [userDefaults synchronize];
 }
 
 - (void)loadTripsData
@@ -65,10 +64,14 @@
     NSLog(@"Remaining days: %ld", (long)totalUsedDays);
     
     self.daysCounterView = [[JDFlipNumberView alloc] initWithDigitCount:2];
-    self.daysCounterView.value = 99;
+    self.daysCounterView.value = 89;
     [self.view addSubview:self.daysCounterView];
   
-    self.daysCounterView.frame = CGRectMake(65,75,250,180);
+    // self.daysCounterView.frame = CGRectMake(65,75,250,180);
+    int targetWidth = self.view.frame.size.width / 1.5 - 100;
+    int targetHeight = self.view.frame.size.height / 3.7;
+    
+    self.daysCounterView.frame = CGRectMake(65,75,targetWidth, targetHeight);
     
     // add UIRefreshView
     UITableViewController *tableViewController = [[UITableViewController alloc] init];
@@ -84,7 +87,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.view bringSubviewToFront:self.daysCounterView];
-    [self updateDaysCounter];
+    self.daysCounterView.value = [self.calc getTotalRemainingDays];
     [self.tripsTableView reloadData];
 }
 
@@ -129,7 +132,7 @@
     if ([trip.name isEqualToString:@""])
         cell.daysCountLabel.center = CGPointMake(cell.daysCountLabel.center.x, 40);
     else
-        cell.daysCountLabel.center = CGPointMake(cell.daysCountLabel.center.x, 25);
+        cell.daysCountLabel.center = CGPointMake(cell.daysCountLabel.center.x, 30);
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateStyle = NSDateFormatterMediumStyle;
@@ -193,7 +196,7 @@
     
     if (self.daysCounterView) {
         NSInteger totalUsedDays = [self.calc getTotalRemainingDays];
-        self.daysCounterView.value = totalUsedDays + 9;
+        //self.daysCounterView.value++;
         [self.daysCounterView animateToValue:totalUsedDays duration:2];
     }
 }
