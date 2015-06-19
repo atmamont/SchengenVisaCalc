@@ -68,6 +68,10 @@
         self.navigationItem.title = @"Add trip";
         self.tripDescription = @"";
     }
+    
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.tableView addGestureRecognizer:gestureRecognizer];
+    gestureRecognizer.cancelsTouchesInView = NO;  // this prevents the gesture recognizers to 'block' touches
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -483,6 +487,13 @@
     }
     [super touchesBegan:touches withEvent:event];
 }
+
+- (void)hideKeyboard
+{
+    SVCTripNameTableViewCell *cell = (SVCTripNameTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [cell.descriptionTextField resignFirstResponder];
+}
+
 
 
 @end

@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Andrey Mamchenko. All rights reserved.
 //
 
+#import <sys/utsname.h>
 #import "SVCMainViewController.h"
 #import "SVCAddTripViewController.h"
 #import "SVCTripsTableViewCell.h"
@@ -67,11 +68,29 @@
     self.daysCounterView.value = 89;
     [self.view addSubview:self.daysCounterView];
   
-    // self.daysCounterView.frame = CGRectMake(65,75,250,180);
-    int targetWidth = self.view.frame.size.width / 1.5 - 100;
-    int targetHeight = self.view.frame.size.height / 3.7;
+  
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString* code = [NSString stringWithCString:systemInfo.machine
+                                        encoding:NSUTF8StringEncoding];
     
-    self.daysCounterView.frame = CGRectMake(65,75,targetWidth, targetHeight);
+   // if ([code isEqualToString:@"iPhone7,2"]) self.daysCounterView.frame = CGRectMake(65,75,250, 180); //iphone 6
+    
+    if ([code isEqualToString:@"iPhone5,3"] ||      // iphone 5
+        [code isEqualToString:@"iPhone5,4"] ||
+        [code isEqualToString:@"iPhone6,1"] ||
+        [code isEqualToString:@"iPhone6,2"] ||
+        [code isEqualToString:@"iPhone5,1"] ||
+        [code isEqualToString:@"iPhone5,2"]) self.daysCounterView.frame = CGRectMake(45,70,230,140);
+    else
+    if ([code isEqualToString:@"iPhone3,1"] ||              // iphone 4
+        [code isEqualToString:@"iPhone3,3"] ||
+        [code isEqualToString:@"iPhone4,1"]) self.daysCounterView.frame = CGRectMake(45,70,230,100);
+    else
+    if ([code isEqualToString:@"iPhone7,1"]) self.daysCounterView.frame = CGRectMake(65,60,280,250); //iphone 6plus
+    else
+        self.daysCounterView.frame = CGRectMake(65,75,250, 180); //iphone 6
+   
     
     // add UIRefreshView
     UITableViewController *tableViewController = [[UITableViewController alloc] init];
@@ -128,11 +147,12 @@
     
     Trip *trip = [self.calc.trips objectAtIndex:indexPath.row];
    
-    // if there is no description - move days counter a little bit lower
+    /*    // if there is no description - move days counter a little bit lower
     if ([trip.name isEqualToString:@""])
         cell.daysCountLabel.center = CGPointMake(cell.daysCountLabel.center.x, 40);
     else
         cell.daysCountLabel.center = CGPointMake(cell.daysCountLabel.center.x, 30);
+    */
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateStyle = NSDateFormatterMediumStyle;
@@ -213,5 +233,7 @@
 - (void)addNewTrip:(UIRefreshControl *)controller {
     [self performSegueWithIdentifier:@"PushAddTripScreen" sender:self];
 }
+
+
 
 @end
